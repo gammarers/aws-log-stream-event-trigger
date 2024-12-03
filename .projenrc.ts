@@ -24,6 +24,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
     },
     extraCliOptions: ['--silent'],
   },
+  lambdaOptions: {
+    runtime: awscdk.LambdaRuntime.NODEJS_20_X,
+    bundlingOptions: {
+      sourcemap: true,
+    },
+  },
   workflowNodeVersion: '22.4.x',
   depsUpgradeOptions: {
     workflowOptions: {
