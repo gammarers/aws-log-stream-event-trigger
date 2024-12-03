@@ -9,6 +9,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: '@gammarers/aws-log-stream-event-trigger',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/gammarers/aws-log-stream-event-trigger.git',
+  devDeps: [
+    // require lambda
+    '@types/aws-lambda@^8',
+    // test snapshots filename renamer
+    '@gammarers/jest-aws-cdk-asset-filename-renamer@^0.5.24',
+  ],
   releaseToNpm: false, // tmp
   npmAccess: javascript.NpmAccess.PUBLIC,
   minNodeVersion: '18.0.0',
