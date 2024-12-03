@@ -18,6 +18,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
   releaseToNpm: false, // tmp
   npmAccess: javascript.NpmAccess.PUBLIC,
   minNodeVersion: '18.0.0',
+  jestOptions: {
+    jestConfig: {
+      snapshotSerializers: ['<rootDir>/node_modules/@gammarers/jest-aws-cdk-asset-filename-renamer'],
+    },
+    extraCliOptions: ['--silent'],
+  },
   workflowNodeVersion: '22.4.x',
   depsUpgradeOptions: {
     workflowOptions: {
