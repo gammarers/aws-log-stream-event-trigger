@@ -149,6 +149,7 @@
         "devDependencies": [
           "**/test/**",
           "**/build-tools/**",
+          "src/funcs/parser.lambda.ts",
           ".projenrc.ts",
           "projenrc/**/*.ts"
         ],
