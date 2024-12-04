@@ -12,6 +12,18 @@ describe('LogStreamEventTrigger default Testing', () => {
 
   const template = Template.fromStack(stack);
 
+  it('Should have one iam role existing', async () => {
+    template.resourceCountIs('AWS::IAM::Role', 1);
+  });
+
+  it('Should have one lambda function existing', async () => {
+    template.resourceCountIs('AWS::Lambda::Function', 1);
+  });
+
+  it('Should have one log group existing', async () => {
+    template.resourceCountIs('AWS::Logs::LogGroup', 1);
+  });
+
   it('Should match snapshot', () => {
     expect(template.toJSON()).toMatchSnapshot();
   });
