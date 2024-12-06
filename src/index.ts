@@ -1,4 +1,4 @@
-import { CfnOutput, Duration, RemovalPolicy, Stack } from 'aws-cdk-lib';
+import { Duration, RemovalPolicy, Stack } from 'aws-cdk-lib';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as destinations from 'aws-cdk-lib/aws-lambda-destinations';
@@ -10,6 +10,9 @@ export interface LogStreamEventTriggerProps {
 }
 
 export class LogStreamEventTrigger extends Construct {
+
+  public readonly logStreamSubscriptionFilterDestinationFunction: lambda.IFunction;
+
   constructor(scope: Construct, id: string /** props?: LogStreamEventTriggerProps */ ) {
     super(scope, id);
 
@@ -21,7 +24,7 @@ export class LogStreamEventTrigger extends Construct {
     // SubscriptionFilterLogParserFunction
 
     // 👇 parser Lambda Function
-    const parserFunction = new ParserFunction(this, 'ParserFunction', {
+    this.logStreamSubscriptionFilterDestinationFunction = new ParserFunction(this, 'ParserFunction', {
       // functionName: undefined,
       architecture: lambda.Architecture.ARM_64,
       timeout: Duration.seconds(10),
@@ -53,11 +56,6 @@ export class LogStreamEventTrigger extends Construct {
       applicationLogLevel: lambda.ApplicationLogLevel.INFO,
       onSuccess: new destinations.EventBridgeDestination(),
       // onFailure: new lambdaDestinations.EventBridgeDestination(),
-    });
-    new CfnOutput(this, 'OutPutParserFunctionName', {
-      key: 'ParserFunctionName',
-      value: parserFunction.functionName,
-      exportName: 'ParserFunctionFunctionName',
     });
 
   }
