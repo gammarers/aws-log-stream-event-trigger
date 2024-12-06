@@ -78,6 +78,7 @@ Any object.
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@gammarers/aws-log-stream-event-trigger.LogStreamEventTrigger.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@gammarers/aws-log-stream-event-trigger.LogStreamEventTrigger.property.logStreamSubscriptionFilterDestinationFunction">logStreamSubscriptionFilterDestinationFunction</a></code> | <code>aws-cdk-lib.aws_lambda.IFunction</code> | *No description.* |
 
 ---
 
@@ -90,6 +91,16 @@ public readonly node: Node;
 - *Type:* constructs.Node
 
 The tree node.
+
+---
+
+##### `logStreamSubscriptionFilterDestinationFunction`<sup>Required</sup> <a name="logStreamSubscriptionFilterDestinationFunction" id="@gammarers/aws-log-stream-event-trigger.LogStreamEventTrigger.property.logStreamSubscriptionFilterDestinationFunction"></a>
+
+```typescript
+public readonly logStreamSubscriptionFilterDestinationFunction: IFunction;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.IFunction
 
 ---
 
