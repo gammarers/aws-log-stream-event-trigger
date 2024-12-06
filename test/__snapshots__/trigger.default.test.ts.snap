@@ -2,16 +2,6 @@
 
 exports[`LogStreamEventTrigger default Testing Should match snapshot 1`] = `
 {
-  "Outputs": {
-    "ParserFunctionName": {
-      "Export": {
-        "Name": "ParserFunctionFunctionName",
-      },
-      "Value": {
-        "Ref": "LogStreamEventTriggerParserFunction924F8116",
-      },
-    },
-  },
   "Parameters": {
     "BootstrapVersion": {
       "Default": "/cdk-bootstrap/hnb659fds/version",
