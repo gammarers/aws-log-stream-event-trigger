@@ -15,7 +15,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     // test snapshots filename renamer
     '@gammarers/jest-aws-cdk-asset-filename-renamer@^0.5.24',
   ],
-  releaseToNpm: false, // tmp
+  releaseToNpm: true,
   npmAccess: javascript.NpmAccess.PUBLIC,
   minNodeVersion: '18.0.0',
   jestOptions: {
