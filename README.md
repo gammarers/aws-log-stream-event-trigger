@@ -14,19 +14,19 @@ This AWS CDK Construct is a function that serves as a subscription destination f
 #### install by npm
 
 ```shell
-npm install @gammarer/aws-log-stream-event-trigger
+npm install @gammarers/aws-log-stream-event-trigger
 ```
 
 #### install by yarn
 
 ```shell
-yarn add @gammarer/aws-log-stream-event-trigger
+yarn add @gammarers/aws-log-stream-event-trigger
 ```
 
 ## Example
 
 ```typescript
-import { LogStreamEventTrigger } from '@gammarer/aws-log-stream-event-trigger';
+import { LogStreamEventTrigger } from '@gammarers/aws-log-stream-event-trigger';
 
 new LogStreamEventTrigger(stack, 'LogStreamEventTrigger');
 
