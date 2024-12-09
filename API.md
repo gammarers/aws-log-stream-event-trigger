@@ -105,18 +105,6 @@ public readonly logStreamSubscriptionFilterDestinationFunction: IFunction;
 ---
 
 
-## Structs <a name="Structs" id="Structs"></a>
-
-### LogStreamEventTriggerProps <a name="LogStreamEventTriggerProps" id="@gammarers/aws-log-stream-event-trigger.LogStreamEventTriggerProps"></a>
-
-#### Initializer <a name="Initializer" id="@gammarers/aws-log-stream-event-trigger.LogStreamEventTriggerProps.Initializer"></a>
-
-```typescript
-import { LogStreamEventTriggerProps } from '@gammarers/aws-log-stream-event-trigger'
-
-const logStreamEventTriggerProps: LogStreamEventTriggerProps = { ... }
-```
-
 
 
 

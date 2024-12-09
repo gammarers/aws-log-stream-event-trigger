@@ -6,14 +6,11 @@ import * as logs from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 import { ParserFunction } from './funcs/parser-function';
 
-export interface LogStreamEventTriggerProps {
-}
-
 export class LogStreamEventTrigger extends Construct {
 
   public readonly logStreamSubscriptionFilterDestinationFunction: lambda.IFunction;
 
-  constructor(scope: Construct, id: string /** props?: LogStreamEventTriggerProps */ ) {
+  constructor(scope: Construct, id: string) {
     super(scope, id);
 
     // 👇 Get current account & region
