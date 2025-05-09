@@ -25,7 +25,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     extraCliOptions: ['--silent'],
   },
   lambdaOptions: {
-    runtime: awscdk.LambdaRuntime.NODEJS_20_X,
+    runtime: awscdk.LambdaRuntime.NODEJS_22_X,
     bundlingOptions: {
       sourcemap: true,
     },

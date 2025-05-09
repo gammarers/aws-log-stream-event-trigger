@@ -17,7 +17,7 @@ export class ParserFunction extends lambda.Function {
     super(scope, id, {
       description: 'src/funcs/parser.lambda.ts',
       ...props,
-      runtime: new lambda.Runtime('nodejs20.x', lambda.RuntimeFamily.NODEJS),
+      runtime: new lambda.Runtime('nodejs22.x', lambda.RuntimeFamily.NODEJS),
       handler: 'index.handler',
       code: lambda.Code.fromAsset(path.join(__dirname, '../../assets/funcs/parser.lambda')),
     });
