@@ -30,7 +30,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
       sourcemap: true,
     },
   },
-  workflowNodeVersion: '22.4.x',
+  workflowNodeVersion: '22.x',
   depsUpgradeOptions: {
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
