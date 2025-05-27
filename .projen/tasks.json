@@ -56,7 +56,7 @@
       "description": "Create a JavaScript bundle from src/funcs/parser.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/funcs/parser.lambda.ts --target=\"node20\" --platform=\"node\" --outfile=\"assets/funcs/parser.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --sourcemap"
+          "exec": "esbuild --bundle src/funcs/parser.lambda.ts --target=\"node22\" --platform=\"node\" --outfile=\"assets/funcs/parser.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --sourcemap"
         }
       ]
     },
@@ -65,7 +65,7 @@
       "description": "Continuously update the JavaScript bundle from src/funcs/parser.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/funcs/parser.lambda.ts --target=\"node20\" --platform=\"node\" --outfile=\"assets/funcs/parser.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --sourcemap --watch"
+          "exec": "esbuild --bundle src/funcs/parser.lambda.ts --target=\"node22\" --platform=\"node\" --outfile=\"assets/funcs/parser.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --sourcemap --watch"
         }
       ]
     },
@@ -238,7 +238,8 @@
       "name": "release",
       "description": "Prepare a release from \"main\" branch",
       "env": {
-        "RELEASE": "true"
+        "RELEASE": "true",
+        "MAJOR": "1"
       },
       "steps": [
         {

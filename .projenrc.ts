@@ -2,13 +2,14 @@ import { awscdk, javascript } from 'projen';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'yicr',
   authorAddress: 'yicr@users.noreply.github.com',
-  cdkVersion: '2.120.0',
-  typescriptVersion: '5.5.x',
-  jsiiVersion: '5.5.x',
+  cdkVersion: '2.189.1',
+  typescriptVersion: '5.8.x',
+  jsiiVersion: '5.8.x',
   defaultReleaseBranch: 'main',
   name: '@gammarers/aws-log-stream-event-trigger',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/gammarers/aws-log-stream-event-trigger.git',
+  majorVersion: 1,
   devDeps: [
     // require lambda
     '@types/aws-lambda@^8',
@@ -25,12 +26,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
     extraCliOptions: ['--silent'],
   },
   lambdaOptions: {
-    runtime: awscdk.LambdaRuntime.NODEJS_20_X,
+    runtime: awscdk.LambdaRuntime.NODEJS_22_X,
     bundlingOptions: {
       sourcemap: true,
     },
   },
-  workflowNodeVersion: '22.4.x',
+  workflowNodeVersion: '22.x',
   depsUpgradeOptions: {
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
