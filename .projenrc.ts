@@ -9,6 +9,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: '@gammarers/aws-log-stream-event-trigger',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/gammarers/aws-log-stream-event-trigger.git',
+  majorVersion: 1,
   devDeps: [
     // require lambda
     '@types/aws-lambda@^8',
